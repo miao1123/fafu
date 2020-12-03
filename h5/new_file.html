@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=1100" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>福建农林大学(新版)</title>
+		<link href="../css/new_file.css" rel="stylesheet">
+		<link href="../css/first.css" rel="stylesheet">
+
+		<style type="text/css">
+			.wp-focus {
+				background-color: #ececec;
+			}
+
+			.wp-focus .wp-inner {
+				max-width: 100%;
+			}
+
+			.slideSelectors {
+				position: relative;
+				bottom: 50%;
+				margin-bottom: -25px;
+				width: 160px;
+				margin: 0 auto;
+				z-index: 1;
+				height: 1px;
+			}
+
+			.iosSliderDemo {
+				clear: both;
+				height: 0px;
+				width: 100%;
+				/* padding: 0 0 30% 0; */
+				padding: 0 0 530px;
+				position: relative;
+			}
+
+			section {
+				display: block;
+			}
+
+			.fluidHeight {
+				position: absolute;
+				width: 100%;
+				height: 530px;
+			}
+
+			.sliderContainer {
+				height: 100%;
+				max-height: 530px;
+				padding: 0 0;
+			}
+
+			.wp-container {
+				background: #f3f6f4;
+				background-size: 100%;
+			}
+
+			.content-box {
+				background: #f3f6f4 url(../img/news-bg.png) no-repeat center bottom;
+				padding-top: 24px;
+			}
+
+			.wp-main-page .content {
+				width: 345px;
+				float: left;
+			}
+
+			.sudy-tab .tab-menu {
+				height: 40px;
+				border-bottom: 2px solid #e5771b;
+				padding-top: 8px;
+
+			}
+
+			.sudy-tab .tab-menu li.selected {
+				color: #7D7D7D;
+			}
+
+			.sudy-tab .tab-menu li {
+				display: inline-block;
+				height: 21px;
+				line-height: 21px;
+				float: left;
+				font-size: 19px;
+				font-weight: normal;
+				color: #000;
+				padding: 0 18px 0 0px;
+				cursor: default;
+				margin-right: 18px;
+			}
+
+			.sudy-tab .tab-menu li.selected a {
+				color: #7D7D7D;
+
+			}
+
+			.sudy-tab .tab-menu li a {
+				color: #000;
+			}
+
+			.sudy-tab .tab-menu li.selected {
+				color: #7D7D7D;
+			}
+
+			.sudy-tab .tab-menu li {
+				display: inline-block;
+				height: 21px;
+				line-height: 21px;
+				float: left;
+				font-size: 19px;
+				font-weight: normal;
+				color: #000;
+				padding: 0 18px 0 0px;
+				cursor: default;
+				margin-right: 18px;
+			}
+
+			.tab-list {
+				padding-top: 16px;
+			}
+
+			.content .focus {
+				position: relative;
+			}
+
+			.focus-box {
+				background-position: center;
+				position: relative;
+				font-family: '\5b8b\4f53';
+			}
+
+			.focus-container {
+				overflow: hidden;
+				position: relative;
+				visibility: hidden;
+			}
+
+			.focus-container .focus-item {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				overflow: hidden;
+			}
+
+			.focus-container .focus-item img {
+				width: 100%;
+				height: 100%;
+				border: 0;
+				vertical-align: top;
+			}
+
+			.focus-title-bar {
+				position: absolute;
+				right: 0px;
+				bottom: 0px;
+				z-index: 40;
+				width: 100%;
+				height: 40px;
+				text-align: center;
+			}
+
+			.focus-title-bg {
+				width: 100%;
+				height: 100%;
+				background-color: #000;
+				opacity: 0.7;
+				filter: alpha(opacity=70);
+			}
+
+			/* @media screen and (max-width: 640px)
+	.content h2 {
+		font-size: 16px;
+		line-height: 50px;
+	}
+	@media screen and (max-width: 800px)
+	.content h2 {
+		font-size: 18px;
+		line-height: 60px;
+	}
+	@media screen and (max-width: 1024px)
+	.content h2 {
+		font-size: 18px;
+		line-height: 60px;
+	} */
+			.focus-title {
+				display: inline-block;
+				white-space: nowrap;
+				height: 40px;
+				line-height: 40px;
+				padding: 0px;
+				width: 100%;
+				color: #fff;
+				font-size: 16px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 50;
+			}
+
+			.focus-title a,
+			.focus-text a {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.focus-prev {
+				left: 0px;
+			}
+
+			.focus-next {
+				right: 0px;
+			}
+
+			.focus-navigation {
+				display: block;
+				width: 30px;
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+				background: #000;
+				text-decoration: none;
+				color: #fff;
+				font-size: 30px;
+				font-weight: bold;
+				text-decoration: none;
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				margin-top: -25px;
+				z-index: 50;
+				opacity: 0.7;
+				filter: alpha(opacity=70);
+			}
+
+			.wp-main-page .sidebar {
+				width: 725px;
+				float: right;
+
+			}
+
+			.wp-post {
+				margin-bottom: 10px;
+			}
+
+			.wp-post .post-head {
+				height: 48px;
+				border-bottom: 2px solid #900300;
+				margin-bottom: 7px;
+			}
+
+			.wp-post .post-head .head-bar {
+				position: relative;
+			}
+
+			.wp-post .post-head .post-title {
+				display: inline-block;
+				height: 40px;
+				line-height: 40px;
+				font-size: 19px;
+				font-weight: normal;
+			}
+
+			.wp-post .post-head .post-more {
+				height: 20px;
+				line-height: 20px;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -10px;
+			}
+
+			.wp-post .post-head .post-more a {
+				color: #424242;
+				text-decoration: none;
+				color: #cbaa6b;
+			}
+
+			.news-r {
+				margin-bottom: 12px;
+			}
+
+			.news-r h1 {
+				color: #900300;
+				font-size: 17px;
+				font-weight: bold;
+				line-height: 45px;
+			}
+
+			.news-r h1 a {
+				color: #900300;
+			}
+
+			.news-r p {
+				color: #666666;
+				font-size: 12px;
+				line-height: 24px;
+			}
+
+			.post-news .news-item {
+				height: 32px;
+				line-height: 32px;
+				vertical-align: top;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.post-news .news-item .meta-title {
+				display: block;
+				margin-right: 76px;
+				overflow: hidden;
+			}
+
+			.post-news .news-item .meta-title a {
+				color: #000;
+				font-size: 14px;
+			}
+
+			.post-news .news-item .meta-time {
+				display: block;
+				text-align: right;
+				width: 80px;
+				height: 20px;
+				line-height: 20px;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -10px;
+				color: #999;
+			}
+
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+
+			.iosSlider .slider .item .inner img {
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				margin: 0 auto;
+				height: 100%;
+				cursor: -webkit-grab;
+			}
+
+			.wp-main-page .content {
+				width: 345px;
+				float: left;
+			}
+
+			.iosSlider {
+				position: relative;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+			}
+
+			/* .slider{
+		position: relative;
+		cursor: -webkit-grab;
+		backface-visibility: hidden;
+		transform: matrix(1, 0, 0, 1, -6760, 0);
+		width: 3380px;
+	} */
+			.item .item1 {
+				overflow: hidden;
+				position: absolute;
+				transform: matrix(1, 0, 0, 1, 6760, 0);
+				backface-visibility: hidden;
+				width: 169px;
+			}
+
+			.iosSlider .slider .item {
+				width: 100%;
+				height: 100%;
+				padding: 0 0 0 0;
+				text-align: center;
+			}
+
+			.iosSlider .slider .item .inner {
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				margin: 0 auto;
+				height: 100%;
+				box-shadow: 0 0 10px -5px #000;
+				background-position: 50% 0;
+				background-repeat: no-repeat;
+				min-width: 1100px;
+			}
+
+			.iosSlider .slider .item .inner .selectorShadow {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				background: url(../_img/selector-shadow.png) no-repeat 0 0;
+				width: 120px;
+				height: 30px;
+				display: none;
+			}
+
+			.iosSlider .slider .item .inner .text1-bg {
+				opacity: 0;
+				filter: alpha(opacity=0);
+				background: none repeat scroll 0 0 #000000;
+				position: absolute;
+				bottom: 12%;
+				padding: 0 12px 0 12px;
+				height: 50px;
+				text-align: left;
+			}
+
+			.sliderContainer .scrollbarContainer {
+				position: relative;
+				bottom: 4px;
+				left: 0;
+				height: 4px;
+				margin: 0 auto;
+				z-index: 1;
+			}
+
+			a img {
+				vertical-align: middle;
+			}
+
+			.post-head {
+				margin: 0px 0px 7px;
+			}
+
+			.clear {
+				width: 100%;
+				height: 0;
+				line-height: 0;
+				font-size: 0;
+				overflow: hidden;
+				clear: both;
+				display: block;
+				_display: inline;
+			}
+
+			.content {
+				padding-bottom: 20px;
+			}
+
+			.tab-box {
+				width: 345px;
+			}
+
+			.tab-list li li {
+				padding: 10px 0;
+			}
+
+			.tab-list .tab-time {
+				line-height: 25px;
+				height: 25px;
+				padding-right: 15px;
+				border-right: 1px solid #a7b1ac;
+				color: #900300;
+				font-size: 14px;
+				margin-right: 12px;
+			}
+
+			.post-19 {
+				width: 725px;
+			}
+
+			.tt-sc {
+				padding: 1px 8px;
+				background: #ddbd7f;
+				color: #fff;
+				font-size: 12px;
+				font-weight: normal;
+				border-radius: 3px;
+				margin-right: 10px;
+			}
+
+			.content .tab-list li li {
+				padding: 0px;
+			}
+
+			.content .post-news .news-item .meta-title {
+				margin-right: 0px;
+			}
+
+			.content .post-news .news-item .meta-title a {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+
+
+
+
+			.slideSelectors {
+				position: relative;
+				bottom: 50%;
+				margin-bottom: -25px;
+				width: 160px;
+				margin: 0 auto;
+				z-index: 10000;
+				height: 1px;
+			}
+
+			.ul2 {
+				width: 100%;
+				height: 100%;
+				background: #00000050;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.ul2>li {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 100%;
+			}
+
+			.ul2>li:nth-child(1) {
+				left: 0px;
+			}
+
+			.pre-botton {
+				float: left;
+				text-align: center;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 35px;
+				color: #fff;
+				cursor: pointer;
+				background: url(../img/focus-bg.png);
+				border-radius: 50%;
+				font-family: "SimSun";
+				font-weight: bold;
+				margin-left: 35px;
+			}
+
+			.next-botton {
+				float: right;
+				text-align: center;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 35px;
+				color: #fff;
+				cursor: pointer;
+				background: url(../img/focus-bg.png);
+				border-radius: 50%;
+				font-family: "SimSun";
+				font-weight: bold;
+				margin-right: 35px;
+			}
+
+
+			.roll {
+				height: 414.4px;
+				background: #f0eeeb;
+
+			}
+
+			.roll-box {
+				width: 1100px;
+				height: 304px;
+				position: relative;
+				padding: 53px 0px;
+				margin: 0 auto;
+			}
+
+
+			.ul1 {
+				width: 1100px;
+				height: 304px;
+				background: #00000050;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.ul1>img {
+				width: 1100px;
+				height: 304px;
+				position: absolute;
+				top: 0px;
+				left: 1100px;
+			}
+
+			.ul1>img:nth-child(1) {
+				left: 0px;
+			}
+
+			.left-botton {
+				float: right;
+				text-align: center;
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 35px;
+				color: #fff;
+				cursor: pointer;
+				background: url(../img/focus-bg.png);
+				border-radius: 50%;
+				font-family: "SimSun";
+				font-weight: bold;
+				margin-left: 35px;
+				top: 205px;
+			}
+
+			.right-botton {
+				float: right;
+				text-align: center;
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 35px;
+				color: #fff;
+				cursor: pointer;
+				background: url(../img/focus-bg.png);
+				border-radius: 50%;
+				font-family: "SimSun";
+				font-weight: bold;
+				margin-right: 35px;
+				top: 205x;
+			}
+			.indexs {
+				z-index: 1000;
+
+			}
+			/* 左右切换轮播图结束 */
+			.news2-box,
+			.zt-box {
+				width: 1100px;
+				margin: 0 auto;
+			}
+
+			.clearfix {
+				display: block;
+				*zoom: 1;
+			}
+
+			.focus-item>img {
+				position: absolute;
+			}
+			.focus-item>img:nth-child(1) {
+				left: 0px;
+				z-index: 2;
+			}
+			.focus-item>img:nth-child(2) {
+				left: 345px;
+			}
+			.focus-item>img:nth-child(3) {
+				left: 345px;
+			}
+			.wp_news_w75{
+				overflow: hidden;
+			}
+			
+			.focus-title>a{
+				display: none;
+				}
+			.focus-title>a:nth-child(1){
+				display: block;
+			}
+			
+			 
+			
+		</style>
+	</head>
+	<body class="wp-main-page">
+		<div class="top">
+			<div class="topnav">
+				<ul class="left-topnav">
+					<li><a href="">办事服务大厅</a>&nbsp;/&nbsp;</li>
+					<li><a href="">办公自动化系统</a>&nbsp;/&nbsp;</li>
+					<li><a href="">校外入口</a>&nbsp;/&nbsp;</li>
+				</ul>
+				<ul class="right-topnav">
+					<li><a href="https://english.fafu.edu.cn/">English</a>&nbsp;/&nbsp;</li>
+					<li><a href="">联系我们</a>&nbsp;/&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 头部 -->
+		<div class="header">
+			<div class="head clearfix">
+				<div class="logo">
+					<a href="">
+						<img src="../img/logo.png">
+					</a>
+				</div>
+				<!-- 搜索 -->
+				<div class="searcher">
+					<div class="searchBtn" style="display: block;" onclick="searchBtnD()"></div>
+					<div class="search-windows" style="width: 45px;">
+						<div class="search">
+							<form action="" name="myform" onsubmit="return pd()">
+								<div class="search-input">
+									<input id="search-text" type="text" name="stext" placeholder="Search...">
+								</div>
+								<div class="search-button">
+									<input id="search-btn" type="submit" value>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 导航 -->
+		<div class="middle clearfix" onclick="searchBtnB()">
+			<div class="middlenav">
+				<ul>
+					<li><a href="">主页</a></li>
+					<li><a href="information01.html">学校概况</a></li>
+					<li><a href="students.html">招生信息</a></li>
+					<li><a href="talent.html">人才培养</a></li>
+					<li><a href="college_setting.html">院处设置</a></li>
+					<li><a href="ndnews.html">农大要闻</a></li>
+					<li><a href="news.html">媒体聚焦</a></li>
+					<li class="dropdown">
+						<a href="course_information.html">学科建设</a>
+						<div class="dropbtn-content">
+							<a href="course_information.html">学科概况</a>
+							<a href="course_key.html">国家、部级重点学科</a>
+							<a href="course_peak.html">福建省高峰、高原学科</a>
+							<a href="course_doctor.html">博士学位授权一级学科点情况</a>
+							<a href="course_master.html">硕士学位授权一级学科点情况</a>
+							<a href="course_speciality.html">专业学位授权点</a>
+							<a href="course_normal.html">普通本科专业</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="science_nature.html">科研机构</a>
+						<div class="dropbtn-content">
+							<a href="science_nature.html">自然科学科研机构</a>
+							<a href="science_society.html">社会科学科研机构</a>
+						</div>
+					</li>
+					<li><a href="magazine.html">学术期刊</a></li>
+					<li><a href="opening_school.html">开放办学</a></li>
+					<li><a href="https://net.fafu.edu.cn/dx/" target="_blank">党员学习</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="wp-navi-aside" id="wp-navi-aside">
+			<div class="aside-inner">
+				<div class="navi-aside-wrap"></div>
+			</div>
+			<div class="navi-aside-mask"></div>
+		</div>
+		<!-- 大图 -->
+		<div class="wp-wrapper wp-focus"  onclick="searchBtnB()">
+			<div class="wp-inner" frag="窗口6">
+				<div id="wp_news_w6">
+					<section class="iosSliderDemo">
+						<div class="fluidHeight">
+							<div class="sliderContainer">
+								<div class="iosSlider">
+									<ul class="ul2" id="ul2">
+										<li><img src="../img/dalun1.jpg" width="100%" height="530"></li>
+										<li><img src="../img/dalun2.jpg" width="100%" height="530"></li>
+										<li><img src="../img/dalun3.jpg" width="100%" height="530"></li>
+										<li><img src="../img/dalun4.jpg" width="100%" height="530"></li>
+									</ul>
+								</div>
+								<div class="slideSelectors" style="width:100%">
+									<div class="pre-botton " id="pre-botton" onclick="nextBtn()">&lt;</div>
+									<div class="next-botton " id="next-botton" onclick="preBtn()">&gt;</div>
+								</div>
+					</section>
+					<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+					<script src="../js/3.js" type="text/javascript" charset="utf-8"></script>
+				</div>
+			</div>
+		</div>
+		<!-- 主体 -->
+		<div class="wp-wrapper wp-container"  onclick="searchBtnB()">
+			<div class="wp-inner clearfix">
+				<div class="content-box clearfix">
+					<div class="content clearfix">
+						<div class="sudy-tab">
+							<ul class="tab-menu">
+								<li class="selected"><a href="">时政要闻</a></li>
+							</ul>
+							<ul class="tab-list">
+								<li frag="窗口75" class="active" style="display: list-item;">
+									<div id="wp_news_w75">
+										<div class="focus focus-box" data-focus style="width: 345px;height: 278px;">
+											<div class="focus-container" style="width: 345px; height: 278px;visibility: visible;">
+												<div class="focus-item" style="display: block;">
+													<img  src="../img/xiaolun01.png" />
+													<img src="../img/xiaolun02.png" />
+													<img src="../img/xiaolun03.png" />
+												</div>
+											</div>
+											<div class="focus-title-bar" style="display: block;">
+												<div class="focus-title-bg"></div>
+												<h2 class="focus-title">
+													<a  href="#">习近平主持召开教育文化卫生体育...</a>
+													<a  href="#">习近平在第七十五届联合国大会一...</a>
+													<a  href="#">中共中央政治局召开会议</a>
+												</h2>
+											</div>
+											<a class="focus-navigation focus-prev" onclick="rBtn()">&lt;</a>
+											<a class="focus-navigation focus-next" onclick="lBtn()">&gt;</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<script src="../js/4.js" type="text/javascript" charset="utf-8"></script>
+					</div>
+					<div class="sidebar">
+						<div class="sbox" frag="" 面板9>
+							<div class="wp-post post-9" frag="窗口9">
+								<div class="post-head">
+									<div class="head-bar">
+										<h3 class="post-title" frag="标题">
+											<span>习近平总书记教育重要论述学习研讨专栏</span>
+										</h3>
+										<div class="post-more" frag="按钮" type="更多">
+											<a href="" class="w9_more">
+												<span frag="按钮内容">更多>></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="post-body">
+									<div id="wp_news_w9">
+
+										<ul class="post-news">
+
+											<li class="news-r">
+												<h1><a href="" title='各学院各部门传达学习学校学习贯彻习近平总书记教育重要论述工作部署会精神'>各学院各部门传达学习学校学习贯彻习近平总书记教育重要论述工作部署会精神</a></h1>
+												<p>连日来，各学院各部门通过召开专题会议、党委（扩大）会议等形式，传达学习学校学习贯彻习近平总书记教育重要论述工作部署会议精神，截至目前，各学院各部门已完成学校工作部署会精神传达学习，并按照校党委的统一要...</p>
+											</li>
+											<li class="news-item item-1 clearfix">
+												<span class="item-meta meta-title"><a href="" title='我校教师热议习近平总书记在科学家座谈会上的重要讲话精神'>我校教师热议习近平总书记在科学家座谈会上的重要讲话精神</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-14</span>
+											</li>
+
+											<li class="news-item item-2 clearfix">
+												<span class="item-meta meta-title"><a href="" title='东南卫视报道习近平总书记在科学家座谈会上的重要讲话在我校引发热烈反响'>东南卫视报道习近平总书记在科学家座谈会上的重要讲话在我校引发热烈反响</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-12</span>
+											</li>
+
+											<li class="news-item item-3 clearfix">
+												<span class="item-meta meta-title"><a href="" title='科研院传达学校学习贯彻习近平总书记教育重要论述工作部署会议精神'>科研院传达学校学习贯彻习近平总书记教育重要论述工作部署会议精神</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-14</span>
+											</li>
+
+											<li class="news-item item-4 clearfix">
+												<span class="item-meta meta-title"><a href="" title='我校教师热议习近平总书记向广大教师和教育工作者致以节日祝贺和诚挚慰问'>我校教师热议习近平总书记向广大教师和教育工作者致以节日祝贺和诚挚慰问</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-12</span>
+											</li>
+
+											<li class="news-item item-5 clearfix">
+												<span class="item-meta meta-title"><a href="" title='管理学院党委理论中心组开展学习贯彻习近平总书记教育重要论述第一次专题学习研讨'>管理学院党委理论中心组开展学习贯彻习近平总书记教育重要论述第一次专题学...</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-10</span>
+											</li>
+
+											<li class="news-item item-6 clearfix">
+												<span class="item-meta meta-title"><a href="" title='安溪校区·安溪茶学院党委理论学习中心组开展学习贯彻习近平总书记教育重要论述第一次专题学习研讨'>安溪校区·安溪茶学院党委理论学习中心组开展学习贯彻习近平总书记教育重要...</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-10</span>
+
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="content-box clearfix">
+					<div class="content clearfix">
+						<div class="sudy-tab">
+							<ul class="tab-menu">
+
+								<li class="selected" style="margin: 0px 18px 0px 0px; padding: 0px 18px 0px 0px ;"><a href="policy.html">上级政策</a></li>
+							</ul>
+							<ul class="tab-list">
+
+								<li frag="窗口176" class="active" style="display: list-item;">
+									<div id="wp_news_w176">
+										<ul class="post-news">
+
+											<li class="news-item item-1 clearfix"><span class="item-meta meta-title"><a href="FAFUnews.html" title='于伟国主持召开福建省委教育工作领导小组会议'>于伟国主持召开福建省委教育工作领导小组会议</a></span></li>
+
+											<li class="news-item item-2 clearfix"><span class="item-meta meta-title"><a href="FAFUnews.html" title='中共中央办公厅印发《关于巩固深化“不忘初心、牢记使命”主题教育成果的意见》'>中共中央办公厅印发《关于巩固深化“不忘初心...</a></span></li>
+
+											<li class="news-item item-3 clearfix"><span class="item-meta meta-title"><a href="FAFUnews.html" title='中共教育部党组：办好新时代学校思想政治理论课'>中共教育部党组：办好新时代学校思想政治理论...</a></span></li>
+
+											<li class="news-item item-4 clearfix"><span class="item-meta meta-title"><a href="FAFUnews.html" title='中国红十字会总会 教育部关于进一步加强和改进新时代学校红十字工作的通知'>中国红十字会总会
+														教育部关于进一步加强和改...</a></span></li>
+
+											<li class="news-item item-5 clearfix"><span class="item-meta meta-title"><a href="FAFUnews.html" title='教育部关于做好庆祝2020年教师节有关工作的通知'>教育部关于做好庆祝2020年教师节有关工作的通...</a></span></li>
+
+											<li class="news-item item-6 clearfix"><span class="item-meta meta-title"><a href="FAFUnews.html" title='教育部关于进一步加强高等学校法治工作的意见'>教育部关于进一步加强高等学校法治工作的意见</a></span></li>
+
+											<li class="news-item item-7 clearfix"><span class="item-meta meta-title"><a href="FAFUnews.html" title='中共中央印发中国共产党基层组织选举工作条例'>中共中央印发中国共产党基层组织选举工作条例</a></span></li>
+
+											<li class="news-item item-8 clearfix"><span class="item-meta meta-title"><a href="FAFUnews.html" title='教育部关于印发《大中小学劳动教育指导纲要（试行）》的通知'>教育部关于印发《大中小学劳动教育指导纲要（...</a></span></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="sidebar">
+						<div class="sbox" frag="面板119">
+							<div class="wp-post post-9" frag="窗口119">
+								<div class="post-head">
+									<div class="head-bar">
+										<h3 class="post-title" frag="标题"><span><a href="ndnews.html">农大要闻</a></span></h3>
+										<div class="post-more" frag="按钮" type="更多"><a href="ndnews.html" class="w119_more"><span frag="按钮内容">更多&gt;&gt;</span></a></div>
+									</div>
+								</div>
+								<div class="post-body">
+									<div id="wp_news_w119">
+
+										<ul class="post-news">
+
+											<li class="news-r">
+												<h1><a href="FAFUnews.html" title='我校启动开展2020级新生先进人物引领教育专项活动'>我校启动开展2020级新生先进人物引领教育专项活动</a></h1>
+												<p><a href="FAFUnews.html" title='我校启动开展2020级新生先进人物引领教育专项活动'>习近平总书记指出：崇尚英雄才会产生英雄，争做英雄才能英雄辈出。伟大出自平凡，平凡造就伟大。只要有坚定...</a></p>
+											</li>
+
+
+											<li class="news-item item-1 clearfix">
+												<span class="item-meta meta-title"><a href="FAFUnews.html" title='我校林占熺老师获评2020年福建省“最美科技工作者”'>我校林占熺老师获评2020年福建省“最美科技工作者”</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-17</span>
+											</li>
+
+											<li class="news-item item-2 clearfix">
+												<span class="item-meta meta-title"><a href="FAFUnews.html" title='校友会召开校友代表会议暨2020年工作会议'>校友会召开校友代表会议暨2020年工作会议</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-18</span>
+											</li>
+
+											<li class="news-item item-3 clearfix">
+												<span class="item-meta meta-title"><a href="FAFUnews.html" title='我校召开学校所属企业体制改革工作推进会'>我校召开学校所属企业体制改革工作推进会</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-18</span>
+											</li>
+
+											<li class="news-item item-4 clearfix">
+												<span class="item-meta meta-title"><a href="FAFUnews.html" title='植物保护学院召开2020级新生助理辅导员培训会'>植物保护学院召开2020级新生助理辅导员培训会</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-18</span>
+											</li>
+
+											<li class="news-item item-5 clearfix">
+												<span class="item-meta meta-title"><a href="FAFUnews.html" title='我校学生在2020年福建省网络空间安全技能竞赛中获佳绩'>我校学生在2020年福建省网络空间安全技能竞赛中获佳绩</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-17</span>
+											</li>
+
+											<li class="news-item item-6 clearfix">
+												<span class="item-meta meta-title"><a href="FAFUnews.html" title='园艺学院召开2020级新生“入校前教育第一课”'>园艺学院召开2020级新生“入校前教育第一课”</a></span>
+												<span class="item-meta meta-time news-date-hide">2020-09-16</span>
+											</li>
+
+										</ul>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+
+
+
+
+				<div class="content-box clearfix">
+					<div class="tab-box fl">
+						<div class="sudy-tab">
+							<ul class="tab-menu">
+								<li class="tab-li1"><a href="notice.html" target="_self">公示公告</a></li>
+								<li>
+									<a href="chair.html" target="_self">讲座报告</a>
+									
+								
+									
+								</li>
+							</ul>
+							<ul class="tab-list">
+								<li frag="窗口35" class="active" style="display: list-item;">
+									<div id="wp_news_w35">
+
+										<ul>
+
+											<li>
+												<span class="tab-time">09-14</span>
+												<span class="tab-tlt"><a href="notice.html" title='公示'>公示</a></span>
+											</li>
+
+											<li>
+												<span class="tab-time">08-19</span>
+												<span class="tab-tlt"><a href="FAFUnews.html" title='福建农林大学大学生新型冠状病毒肺炎防护手册'>福建农林大学大学生新型冠状病毒肺炎防护手册</a></span>
+											</li>
+
+											<li>
+												<span class="tab-time">09-18</span>
+												<span class="tab-tlt"><a href="FAFUnews.html" title='金山校区9月22日新生报到交通管制通告'>金山校区9月22日新生报到交通管制通告</a></span>
+											</li>
+
+											<li>
+												<span class="tab-time">09-18</span>
+												<span class="tab-tlt"><a href="FAFUnews.html" title='关于做好2021年度省级财政林业科技项目申报工作的通知'>关于做好2021年度省级财政林业科技项目申报工作的通知</a></span>
+											</li>
+
+										</ul>
+									</div>
+								</li>
+								<li frag="窗口36" style="display: none;">
+									<div id="wp_news_w36">
+
+										<ul>
+
+											<li>
+												<span class="tab-time">09-18</span>
+												<span class="tab-tlt"><a href="FAFUnews.html" title='教师教学发展系列活动（166期）——课程思政系列活动'>教师教学发展系列活动（166期）——...</a></span>
+											</li>
+
+											<li>
+												<span class="tab-time">09-09</span>
+												<span class="tab-tlt"><a href="FAFUnews.html" title='教师教学发展系列活动（165期）——玩转课堂：基于学习科学的教学活动设计与创新'>教师教学发展系列活动（165期）——...</a></span>
+											</li>
+
+											<li>
+												<span class="tab-time">07-06</span>
+												<span class="tab-tlt"><a href="FAFUnews.html" title='教师教学发展系列活动（161期）——“课程思政”专题培训'>教师教学发展系列活动（161期）——...</a></span>
+											</li>
+
+											<li>
+												<span class="tab-time">06-23</span>
+												<span class="tab-tlt"><a href="FAFUnews.html" title='教师教学发展系列活动（160期）——在线考试方案及实施研讨'>教师教学发展系列活动（160期）——...</a></span>
+											</li>
+
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="wp-post post-19 fr" frag="窗口19">
+						<div class="post-head">
+							<div class="head-bar">
+								<h3 class="post-title" frag="标题"><span><a href="news.html">媒体农大</a></span></h3>
+								<div class="post-more" frag="按钮" type="更多"><a href="news.html" class="w19_more"><span frag="按钮内容">更多&gt;&gt;</span></a></div>
+							</div>
+						</div>
+						<div class="post-body">
+							<div id="wp_news_w19">
+								<ul class="post-news">
+									<li class="news-r">
+										<h1><span class="tt-sc">东南卫视</span><a href="newspage.html" title='东南卫视（2020-09-12）：肩负历史责任 勇攀科学高峰 习近平总书记在科学家座谈会上的重要讲话在福建引发热烈反响'>东南卫视（2020-09-12）：肩负历史责任
+												勇攀科学高峰 习近平总书...</a></h1>
+										<p>9月12日，东南卫视播出《肩负历史责任勇攀科学高峰习近平总书记在科学家座谈会上的重要讲话在福建引发热烈...</p>
+									</li>
+									<li class="news-item item-1 clearfix">
+										<span class="item-meta meta-title"><span class="tt-sc">中国新闻网</span><a href="newspage.html" title='中国新闻网（2020-09-12）：甘肃定西：荒山秃岭长“新发” 万亩菌草长势旺'>中国新闻网（2020-09-12）：甘肃定西：荒山秃岭长“新发”
+												万亩...</a></span>
+										<span class="item-meta meta-time news-date-hide">2020-09-16</span>
+									</li>
+									<li class="news-item item-2 clearfix">
+										<span class="item-meta meta-title"><span class="tt-sc">新华网</span><a href="newspage.html" title='新华网（2020-09-14）：“长汀经验”在定西“扎根抽梢” 万亩“福州林”铺出幸福路 '>新华网（2020-09-14）：“长汀经验”在定西“扎根抽梢”
+												万亩“...</a></span>
+										<span class="item-meta meta-time news-date-hide">2020-09-15</span>
+									</li>
+									<li class="news-item item-3 clearfix">
+										<span class="item-meta meta-title"><span class="tt-sc">省教育厅网</span><a href="newspage.html" title='省教育厅网（2020-09-14）：我省各地各校多形式庆祝教师节'>省教育厅网（2020-09-14）：我省各地各校多形式庆祝教师节</a></span>
+										<span class="item-meta meta-time news-date-hide">2020-09-14</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<!-- 第二个轮播图开始 -->
+		<div class="wp-container2">
+			<div class="roll">
+				<div class="roll-box" frag="窗口84">
+					<div class="ul1" id="ul1">
+						<img src="../img/1.jpg" width="1100" height="304">
+						<img src="../img/2.jpg" width="1100" height="304">
+						<img src="../img/3.jpg" width="1100" height="304">
+						<img src="../img/4.jpg" width="1100" height="304">
+					</div>
+					<div class="left-botton indexs" id="left-botton" onclick="rightBtn()">&lt;</div>
+					<div class="right-botton indexs" id="right-botton" onclick="leftBtn()">&gt;</div>
+				</div>
+			</div>
+			<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="../js/2.js" type="text/javascript" charset="utf-8"></script>
+		</div>
+		<!-- 第二个轮播图结束 -->
+
+
+		<!-- 第二个轮播图下方列表开始 -->
+		<div class="news2-box clearfix">
+			<div class="n2-l fl">
+				<div class="wp-post post-17" frag="窗口17">
+					<div class="post-head">
+						<div class="head-bar">
+							<h3 class="post-title" frag="标题"><span>学院动态</span></h3>
+							<div class="post-more" frag="按钮" type="更多"><a href="#" class="w17_more"><span frag="按钮内容">更多&gt;&gt;</span></a></div>
+						</div>
+					</div>
+					<div class="post-body">
+						<div id="wp_news_w17">
+
+							<ul class="post-news">
+
+								<li class="news2-img">
+									<img src="../img/01.jpg" alt="" />
+									<h2><a href="#" target='_blank' title='资源与环境学院举行2020年新生班主任暨助班座谈会'>资源与环境学院举行2020年新生班主任暨助班座谈会</a></h2>
+									<p>9月14日下午，资源与环境学院在博学楼210会议室举行2020年新生班...</p>
+								</li>
+
+
+								<li class="news-item item-1 clearfix">
+									<span class="item-meta meta-title"><a href="#" target='_blank' title='公共管理学院党委理论中心组学习习近平总书记在全国抗击新冠肺炎疫情表彰大会上的重要讲话精神'>公共管理学院党委理论中心组学习习近平总书记在全国...</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-15</span>
+								</li>
+
+								<li class="news-item item-2 clearfix">
+									<span class="item-meta meta-title"><a href="#" target='_blank' title='艺术学院园林学院召开学院教职工大会'>艺术学院园林学院召开学院教职工大会</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-15</span>
+								</li>
+
+								<li class="news-item item-3 clearfix">
+									<span class="item-meta meta-title"><a href="#" target='_blank' title='资源与环境学院开展“院领导接待日”活动'>资源与环境学院开展“院领导接待日”活动</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-15</span>
+								</li>
+								<li class="news-item item-4 clearfix">
+									<span class="item-meta meta-title"><a href="#;" target='_blank' title='园艺学院召开“十四五”事业发展规划编制工作专题会'>园艺学院召开“十四五”事业发展规划编制工作专题会</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-15</span>
+								</li>
+
+								<li class="news-item item-5 clearfix">
+									<span class="item-meta meta-title"><a href="#" target='_blank' title='植物保护学院组织学生上好专题心理辅导课'>植物保护学院组织学生上好专题心理辅导课</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-15</span>
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="n2-l fl">
+				<div class="wp-post post-27" frag="窗口27">
+					<div class="post-head">
+						<div class="head-bar">
+							<h3 class="post-title" frag="标题"><span>部处动态</span></h3>
+							<div class="post-more" frag="按钮" type="更多"><a href="#" class="w27_more"><span frag="按钮内容">更多&gt;&gt;</span></a></div>
+						</div>
+					</div>
+					<div class="post-body">
+						<div id="wp_news_w27">
+
+							<ul class="post-news">
+
+								<li class="news2-img">
+									<img src="../img/02.jpg" alt="" />
+									<h2><a href='#' target='_blank' title='我校举行“第七次全国人口普查”工作部署会暨培训会'>我校举行“第七次全国人口普查”工作部署会暨培训会</a></h2>
+									<p>9月10日下午，我校“第七次全国人口普查”工作部署会暨培训会在...</p>
+								</li>
+
+
+								<li class="news-item item-1 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='我校台籍教师代表受邀参加省总工会教师节慰问活动'>我校台籍教师代表受邀参加省总工会教师节慰问活动</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-09</span>
+								</li>
+
+								<li class="news-item item-2 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='学生处召开新学期资助工作会议'>学生处召开新学期资助工作会议</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-09</span>
+								</li>
+
+								<li class="news-item item-3 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='基建处完成疫情防控和危房整治基建工作'>基建处完成疫情防控和危房整治基建工作</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-04</span>
+								</li>
+
+								<li class="news-item item-4 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='离退休干部处看望慰问我校抗战老战士'>离退休干部处看望慰问我校抗战老战士</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-03</span>
+								</li>
+
+								<li class="news-item item-5 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='校医院进行秋季开学校园环境除“四害”消杀工作'>校医院进行秋季开学校园环境除“四害”消杀工作</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-01</span>
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="n2-r fr">
+				<div class="wp-post post-17" frag="窗口37">
+					<div class="post-head">
+						<div class="head-bar">
+							<h3 class="post-title" frag="标题"><span>校园文化</span></h3>
+							<div class="post-more" frag="按钮" type="更多"><a href="#" class="w37_more"><span frag="按钮内容">更多&gt;&gt;</span></a></div>
+						</div>
+					</div>
+					<div class="post-body">
+						<div id="wp_news_w37">
+
+							<ul class="post-news">
+
+								<li class="news2-img">
+									<img src="../img/03.jpg" alt="" />
+									<h2><a href='#' target='_blank' title='园艺学院召开2020级新生“入校前教育第一课”'>园艺学院召开2020级新生“入校前教育第一课”</a></h2>
+									<p>9月15日上午，园艺学院通过腾讯会议在线召开2020级新生“入校前...</p>
+								</li>
+
+
+								<li class="news-item item-1 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='安溪茶学院开展“早起、早读、早锻炼”活动'>安溪茶学院开展“早起、早读、早锻炼”活动</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-15</span>
+								</li>
+
+								<li class="news-item item-2 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='计算机与信息学院收到大学生实践队暑期社会实践感谢函'>计算机与信息学院收到大学生实践队暑期社会实践感谢...</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-14</span>
+								</li>
+
+								<li class="news-item item-3 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='资源与环境学院举办求职简历制作暨面试技巧专题讲座'>资源与环境学院举办求职简历制作暨面试技巧专题讲座</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-14</span>
+								</li>
+
+								<li class="news-item item-4 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='生命科学学院组织开展2020级本科新生助理班主任培训'>生命科学学院组织开展2020级本科新生助理班主任培训</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-14</span>
+								</li>
+
+								<li class="news-item item-5 clearfix">
+									<span class="item-meta meta-title"><a href='#' target='_blank' title='安溪茶学院举行2020级新生助班见面会暨培训会'>安溪茶学院举行2020级新生助班见面会暨培训会</a></span>
+									<span class="item-meta meta-time news-date-hide">2020-09-11</span>
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 轮播图下方列表结束 -->
+
+
+		<!-- 专题网站开始 -->
+		<div class="zt-box">
+			<div class="zt-tlt">专题网站</div>
+			<div class="zt-con" frag="窗口90">
+
+				<ul class="zt-ul clearfix">
+
+					<li class="fl"><a href="#" target="_blank">第四次党代会专题网</a></li>
+
+					<li class="fl"><a href="#" target="_blank">农大基本数据</a></li>
+
+					<li class="fl"><a href="#" target="_blank">信息公开网</a></li>
+
+					<li class="fl"><a href="#" target="_blank">师生意见与建议大厅</a></li>
+
+					<li class="fl"><a href="#" target="_blank">人才招聘网</a></li>
+
+					<li class="fl"><a href="#" target="_blank">校友信息网</a></li>
+
+					<li class="fl none-r"><a href="#" target="_blank">就业信息网</a></li>
+
+					<li class="fl"><a href="#" target="_blank">仪器共享平台</a></li>
+
+					<li class="fl"><a href="#" target="_blank">干部在线培训</a></li>
+
+					<li class="fl"><a href="#" target="_blank">我们的“易班”</a></li>
+
+					<li class="fl"><a href="#" target="_blank">淮安公安专题</a></li>
+
+					<li class="fl"><a href="#" target="_blank">教学资源</a></li>
+
+					<li class="fl"><a href="#" target="_blank">校园邮箱</a></li>
+
+					<li class="fl none-r"><a href="#" target="_blank">文献检索</a></li>
+
+					<li class="fl"><a href="#" target="_blank">公共服务窗口评价</a></li>
+
+					<li class="fl"><a href="#" target="_blank">我要举报</a></li>
+
+					<li class="fl"><a href="#" target="_blank">招标投标</a></li>
+
+					<li class="fl"><a href="#" target="_blank">后勤服务大厅</a></li>
+
+					<li class="fl"><a href="#" target="_blank">一卡通中心</a></li>
+
+					<li class="fl"><a href="#" target="_blank">常用链接</a></li>
+
+					<li class="fl none-r"><a href="#" target="_blank">印象农林大</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+		</div>
+		<!-- 专题网站结束-->
+		<div class="footer">
+			<div class="foot">
+				<div class="foot-top clearfix">
+					<div class="foot-logo">
+						<img src="../img/foot-logo.png">
+					</div>
+					<div class="foot-box">
+						<ul>
+							<li>
+								<a href="">
+									<img src="../img/118b52e3-31d4-4d58-b177-67d28a38135a.jpg">
+									<p>微信</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="../img/52b30fe8-abe9-4e2b-894b-b6a5323006f5.jpg">
+									<p>微博</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="../img/1a08ebb3-d50c-49f6-a503-4f4cc2619aa5.jpg">
+									<p>电子校报</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="foot-cp">
+						地址：福建省福州市仓山区上下店路15号
+						<br />
+						邮编：350002
+					</div>
+				</div>
+				<div class="foot-bottom">
+					<a href="">闽ICP备10012082号</a>
+					<span><img src="../img/WABA.png">闽公网安备35010402350912号，网络安全等级保护备案编号35011943059-00001</span>
+					版权所有 © 福建农林大学
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script src="../js/search.js"></script>
+	</body>
+</html>

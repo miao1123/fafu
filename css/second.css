@@ -1,0 +1,498 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+/* 最头部导航 */
+.top{
+	background-color: #5f0200;
+}
+.topnav{
+	width: auto;
+	max-width: 1100px;
+	height: 32px;
+	margin: 0 auto;
+}
+/* 最头部的左部导航 左浮动 */
+.left-topnav{
+	float: left;
+}
+/* 最头部的右边导航 右浮动 */
+.right-topnav{
+	float: right;
+}
+/* 排序样式清除 */
+.topnav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.topnav li{
+	float: left;
+	color: #c1b8c1;
+	line-height: 32px;
+	font-size: 14px;
+}
+/* a标签样式清除等 */
+.topnav a{
+	text-decoration: none;
+	color: #c1b8c1;
+	display: inline-block;
+	text-align: center;
+}
+/* 头部logo部分 */
+.header{
+	background-color: #900300;
+}
+.head{
+	width: auto;
+	max-width: 1100px;
+	height: 100px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo{
+	float: left;
+	padding: 16px 0;
+	margin-left: 10px;
+}
+.searcher{
+	float: right;
+	clear: right;
+	width: 14%;
+	margin-right: 45px;
+	margin-bottom: 12px;
+	margin-top: 32px;
+	position: relative;
+}
+.searchBtn{
+	width: 41px;
+	height: 40px;
+	border: 0;
+	outline: 0;
+	background: url('/img/search.png') no-repeat center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 120;
+}
+.search-windows{
+	padding-left: 423px;
+	background: url('../img/xx.png') no-repeat 1px 0px;
+	border: 0px solid red;
+	background-color: transparent;
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 100;
+}
+.search{
+	position: relative;
+}
+.search-button{
+	width: 41px;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -20px;
+}
+#search-btn{
+	width: 100%;
+	height: 40px;
+	border: 0;
+	outline: 0;
+	background: url('../img/search.png') no-repeat center;
+	cursor: pointer;
+}
+.search-input{
+	margin-left: 10px;
+	margin-right: 42px;
+}
+#search-text{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border: 0;
+	outline: 0;
+	background: #fff;
+	color: #555;
+	text-indent: 1em;
+	font-size: 14px;
+	padding: 5px 0;
+	border-radius: 20px;
+}
+/* .search input[type=submit]:active .search-text{
+	display: block;
+} */
+.clearfix::after{
+	clear: both;
+	height: 0;
+}
+
+/* 中间导航部分 */
+.middle{
+	background-color: #eae5e2;
+	/* overflow: hidden; */
+}
+.middlenav{
+	width: auto;
+	max-width: 1100px;
+	height: 53px;
+	margin: 0 auto;
+	position: relative;
+}
+.middlenav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.middlenav li{
+	float: left;
+}
+.middlenav a{
+	text-decoration: none;
+	color: #184830;
+	display: inline-block;
+	height: 53px;/* a标签的高度 */
+	line-height: 53px;/* 行高：字体的高度 */
+	padding: 0 15px;
+	font-size: 16px;
+	
+}
+.middlenav a:hover{
+	background-color: #900300;
+	color: #eae5e2;
+}
+/* 中间导航的下拉框部分 */
+.dropdown{
+	position: relative;
+	display: inline-block;
+}
+.dropdown:hover .dropbtn-content{/* 鼠标移到的时候让下拉框显示 */
+	display: block;
+}
+.dropbtn-content{
+	background-color: #fff;
+	display: none;/* 默认隐藏 */
+	position: absolute;
+	left: 0;
+	top: 53px;
+	z-index: 100;/* 重要！需要有这个元素下拉框部分才不会被底下的div挡住 使用它的前提是有使用positio定位 */
+}
+.dropbtn-content a{
+	text-align: none;
+	color: #184830;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 8px;
+	display: block;
+	white-space: nowrap;/* 重要！ */
+	border-bottom: 1px solid #ddd;
+}
+.dropbtn-content a:hover{
+	background-color: #900300;
+	color: #fff;
+}
+/* 顶部图 */
+.imger{
+	background-color: #ececec;
+	width: 100%;
+	position: relative;
+}
+.banner{
+	width: 1100px;
+	height: 193.4px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.banner>img{
+	width: 100%;
+	vertical-align: top;
+	position: absolute;
+	top: 0px;
+	left: -1100px;
+}
+.banner>img:nth-child(1){
+	left: 0px;
+}
+/* 主体部分 */
+.mainer{
+	background-color: #f3f6f4;
+}
+.main{
+	width: auto;
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+/* 左部菜单 */
+.left-menu{
+	width: 220px;
+	background-color: #f5f5f5;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin-right: -220px;
+}
+.left-menu-head{
+	background-color: #900300;
+	line-height: 24px;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	padding: 10px;
+	display: block;
+}
+.left-menu-head span{
+	font-weight: normal;
+	font-size: 18px;
+}
+.left-menu-body ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.left-menu-body a{
+	text-decoration: none;
+	width: 190px;
+	padding: 10px;
+	padding-left: 20px;
+	line-height: 22px;
+	display: block;
+	border-bottom: 1px solid #b3b3b3;
+	color: #383838;
+	font-size: 16px;
+	background: #eee url('/img/li.png') no-repeat 10px 19px;
+}
+.left-menu-body a.active{
+	background-color: #900300;
+	color: #fff;
+}
+/* 右部文档内容 */
+.right-news{
+	float: right;
+	width: 100%;
+}
+.right-news-box{
+	padding-left: 240px;
+	margin-right: 15px;
+}
+/* 右部文档内容头部 */
+.right-news-head{
+	padding: 10px 0;
+	border-bottom: 2px solid #e5e5e5;
+	height: 24px;
+}
+.right-news-header{
+	float: left;
+	line-height: 24px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #900300;
+	overflow: hidden;
+	max-width: 370px;
+}
+.path{
+	float: right;
+	line-height: 24px;
+	color: #454545;
+}
+.path span{
+	float: left;
+	color: #454545;
+}
+.path ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+.path li{
+	float: left;
+}
+.path a{
+	text-decoration: none;
+	display: inline-block;
+	color: #454545;
+	max-width: 170px;
+	overflow: hidden;
+}
+/* 右部文档内容新闻部 */
+.right-news-body{
+	padding: 10px 0;
+}
+.news{
+	width: auto;
+	margin: 0 4px;
+	line-height: 1.7;
+	font-size: 15px;
+	text-align: justify;
+}
+.news p{
+	margin-bottom: 10px;
+}
+.news img{
+	float: none;
+}
+#news-a{
+	text-decoration: none; 
+	color: #333;
+}
+#news-a:hover{
+	color: red;
+	text-decoration: underline;
+}
+/* 学术期刊 */
+.magazineul a{
+	text-decoration: none;
+	color: #5A5A5A;
+	font-size: 15px;
+}
+.magazineul li{
+	margin-bottom: 10px;
+}
+.magazineul a:hover{
+	text-decoration: underline;
+	color: #900300;
+}
+/* 媒体农大 */
+.newsul a{
+	text-decoration: none;
+	color: #333;
+	font-size: 14px;
+	display: block;
+	position: relative;
+	border-bottom: 1px dashed #b1b1b1;
+	line-height: 1.4em;
+	padding: 5px 0;
+	padding-left: 0px;
+	padding-left: 10px;
+	background: url(../img/dot.png) no-repeat 2px 13px;
+}
+.date{
+	display: block;
+	text-align: right;
+	width: 80px;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	right: 0;
+	top: 5px;
+	color: #999;
+}
+.yemian{
+	font-size: 13px;
+	font-family: 'Microsoft Yahei', Verdana, Geneva, sans-serif;
+	color: #494949;
+}
+.yemian li{
+	height: 25px;
+	line-height: 25px;
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+.yemian a{
+	text-decoration: none;
+	color: #666;
+	line-height: 25px;
+	height: 25px;
+	margin-left: 10px;
+}
+.yemian input{
+	font-size: 12px;
+	width: 24px;
+	height: 15px;
+	line-height: 15px;
+	border: 1px solid #d5d5d5;
+	background: #fff;
+	margin-top: 4px;
+	text-align: center;
+	margin-left: 10px;
+}
+/* 底部 */
+.footer{
+	background: #900300 url('/img/foot-bg.png') no-repeat center bottom;
+	overflow: hidden;
+	color: #fff;
+	line-height: 24px;
+	font-size: 14px;
+}
+.foot{
+	width: auto;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 15px 0 35px 0;
+}
+/* 底部的上层部分 */
+.foot-top{
+	height: 202px;
+	padding-top: 40px;
+}
+.foot-logo{
+	float: left;
+	
+}
+.foot-cp{
+	float: right;
+	text-align: left;
+	margin-right: 35px;
+	color: #caa4a3;
+}
+.foot-box{
+	float: right;
+}
+.foot-box ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.foot-box li{
+	float: left;
+	margin-right: 15px;/* 每个li标签右部外边距都为15px */
+}
+.foot-box a{
+	text-decoration: none;
+	color: #fff;
+	margin: 0 5px;/* 每个a标签左右部外边距都为5px */
+	display: inline-block;/* 内联块元素 */
+}
+.foot-box p{
+	text-align: center;
+}
+.foot-box img{
+	width: 101px;
+	height: 101px;
+	vertical-align: middle;
+}
+.foot-bottom{
+	color: #caa4a3;
+	text-align: center;
+}
+.foot-bottom a{
+	text-decoration: none;
+	color: #caa4a3;
+}
+.foot-bottom span{
+	margin-right: 10px;
+}
+
+/* 表格们 */
+.mul{
+	font-size: 15px;
+	font-weight: 700;
+	height: 41px;
+}
+.news-table-society td{
+	padding: 0cm 7px;
+	border: 1px solid black;
+	/* width: 7.26%; */
+	height: 26px;
+	background-color: transparent;
+	border-image: none;
+	font-family: 宋体,simsun;
+	font-size: 14px;
+}

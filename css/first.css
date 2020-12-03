@@ -1,0 +1,263 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+/* 最头部导航 */
+.top{
+	background-color: #5f0200;
+}
+.topnav{
+	width: auto;
+	max-width: 1100px;
+	height: 32px;
+	margin: 0 auto;
+}
+/* 最头部的左部导航 左浮动 */
+.left-topnav{
+	float: left;
+}
+/* 最头部的右边导航 右浮动 */
+.right-topnav{
+	float: right;
+}
+/* 排序样式清除 */
+.topnav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.topnav li{
+	float: left;
+	color: #c1b8c1;
+	line-height: 32px;
+	font-size: 14px;
+}
+/* a标签样式清除等 */
+.topnav a{
+	text-decoration: none;
+	color: #c1b8c1;
+	display: inline-block;
+	text-align: center;
+}
+/* 头部logo部分 */
+.header{
+	background-color: #900300;
+}
+.head{
+	width: auto;
+	max-width: 1100px;
+	height: 100px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo{
+	float: left;
+	padding: 16px 0;
+	margin-left: 10px;
+}
+.searcher{
+	float: right;
+	clear: right;
+	width: 14%;
+	margin-right: 45px;
+	margin-bottom: 12px;
+	margin-top: 32px;
+	position: relative;
+}
+.searchBtn{
+	width: 41px;
+	height: 40px;
+	border: 0;
+	outline: 0;
+	background: url('/img/search.png') no-repeat center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 120;
+}
+.search-windows{
+	padding-left: 423px;
+	background: url('../img/xx.png') no-repeat 1px 0px;
+	border: 0px solid red;
+	background-color: transparent;
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 100;
+}
+.search{
+	position: relative;
+}
+.search-button{
+	width: 41px;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -20px;
+}
+#search-btn{
+	width: 100%;
+	height: 40px;
+	border: 0;
+	outline: 0;
+	background: url('../img/search.png') no-repeat center;
+	cursor: pointer;
+}
+.search-input{
+	margin-left: 10px;
+	margin-right: 42px;
+}
+#search-text{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border: 0;
+	outline: 0;
+	background: #fff;
+	color: #555;
+	text-indent: 1em;
+	font-size: 14px;
+	padding: 5px 0;
+	border-radius: 20px;
+}
+/* .search input[type=submit]:active .search-text{
+	display: block;
+} */
+.clearfix::after{
+	clear: both;
+	height: 0;
+}
+
+/* 中间导航部分 */
+.middle{
+	background-color: #eae5e2;
+	/* overflow: hidden; */
+}
+.middlenav{
+	width: auto;
+	max-width: 1100px;
+	height: 53px;
+	margin: 0 auto;
+	position: relative;
+}
+.middlenav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.middlenav li{
+	float: left;
+}
+.middlenav a{
+	text-decoration: none;
+	color: #184830;
+	display: inline-block;
+	height: 53px;/* a标签的高度 */
+	line-height: 53px;/* 行高：字体的高度 */
+	padding: 0 15px;
+	font-size: 16px;
+	
+}
+.middlenav a:hover{
+	background-color: #900300;
+	color: #eae5e2;
+}
+/* 中间导航的下拉框部分 */
+.dropdown{
+	position: relative;
+	display: inline-block;
+}
+.dropdown:hover .dropbtn-content{/* 鼠标移到的时候让下拉框显示 */
+	display: block;
+}
+.dropbtn-content{
+	background-color: #fff;
+	display: none;/* 默认隐藏 */
+	position: absolute;
+	left: 0;
+	top: 53px;
+	z-index: 100;/* 重要！需要有这个元素下拉框部分才不会被底下的div挡住 使用它的前提是有使用positio定位 */
+}
+.dropbtn-content a{
+	text-align: none;
+	color: #184830;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 8px;
+	display: block;
+	white-space: nowrap;/* 重要！ */
+	border-bottom: 1px solid #ddd;
+}
+.dropbtn-content a:hover{
+	background-color: #900300;
+	color: #fff;
+}
+/* 底部 */
+.footer{
+	background: #900300 url('/img/foot-bg.png') no-repeat center bottom;
+	overflow: hidden;
+	color: #fff;
+	line-height: 24px;
+	font-size: 14px;
+}
+.foot{
+	width: auto;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 15px 0 35px 0;
+}
+/* 底部的上层部分 */
+.foot-top{
+	height: 202px;
+	padding-top: 40px;
+}
+.foot-logo{
+	float: left;
+	
+}
+.foot-cp{
+	float: right;
+	text-align: left;
+	margin-right: 35px;
+	color: #caa4a3;
+}
+.foot-box{
+	float: right;
+}
+.foot-box ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.foot-box li{
+	float: left;
+	margin-right: 15px;/* 每个li标签右部外边距都为15px */
+}
+.foot-box a{
+	text-decoration: none;
+	color: #fff;
+	margin: 0 5px;/* 每个a标签左右部外边距都为5px */
+	display: inline-block;/* 内联块元素 */
+}
+.foot-box p{
+	text-align: center;
+}
+.foot-box img{
+	width: 101px;
+	height: 101px;
+	vertical-align: middle;
+}
+.foot-bottom{
+	color: #caa4a3;
+	text-align: center;
+}
+.foot-bottom a{
+	text-decoration: none;
+	color: #caa4a3;
+}
+.foot-bottom span{
+	margin-right: 10px;
+}
